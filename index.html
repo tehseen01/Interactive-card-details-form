@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <article>
+        <div class="card-container">
+          <div class="back-card">
+            <div class="card-cvv">000</div>
+          </div>
+          <div class="front-card">
+            <div class="card-content">
+              <img src="./images/card-logo.svg" alt="logo" class="card-logo" />
+              <div class="card-number">0000 0000 0000 0000</div>
+              <div class="card-name-exp">
+                <span class="card-name">Jane Appleseed</span>
+                <div>
+                  <span class="card-month">00</span>&sol;
+                  <span class="card-year">00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-container">
+          <form action="/" id="form-control" autocomplete="off">
+            <label for="name">Cardholder Name</label>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              name="name"
+              id="input-name"
+              maxlength="25"
+            />
+            <p class="error-text"></p>
+            <label for="number">Card Number</label>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              name="number"
+              maxlength="16"
+              id="input-number"
+            />
+            <p class="error-text"></p>
+            <div class="form-exp-cvv">
+              <div class="form-exp">
+                <label for="date" class="exp-label">Exp. Date (MM/YY)</label>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="MM"
+                    name="date"
+                    class="month-input"
+                    maxlength="2"
+                    minlength="1"
+                  />
+                  <input
+                    type="text"
+                    placeholder="YY"
+                    name="date"
+                    class="year-input"
+                    maxlength="2"
+                  />
+                </div>
+                <p class="error-text" id="exp-error"></p>
+              </div>
+              <div class="form-cvv">
+                <label for="cvv" class="cvv-label">CVC</label>
+                <input
+                  type="text"
+                  placeholder="e.g. 123"
+                  name="cvv"
+                  class="cvv-input"
+                  maxlength="3"
+                />
+                <p class="error-text"></p>
+              </div>
+            </div>
+            <button class="btn submit-btn">Confirm</button>
+          </form>
+        </div>
+
+        <!-- Completed state start -->
+
+        <div class="complete-section">
+          <img src="./images/icon-complete.svg" alt="" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="btn btn-2">Continue</button>
+        </div>
+      </article>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
